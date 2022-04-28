@@ -1,35 +1,27 @@
 public class Coordenada {
-
-  private double x, y;
-
-  public Coordenada(double x, double y) {
-
+  private Double x, y, magnitud;
+  public Coordenada(Double x, Double y) {
       this.x = x;
-
       this.y = y;
-
+      this.magnitud = Math.sqrt((x * x) + (y * y));
   }
-
+  public Coordenada() {
+      
+  }
+  public void setCoordenadas(double x, double y) {
+      this.x = x;
+      this.y = y;
+  }
   //Metodo getter de x
-
-  public double abcisa( ) { return x; }
-
-
+  public Double abcisa( ) { return x; }
 
   //Metodo getter de y
-
-  public double ordenada( ) { return y; }
-
+  public Double ordenada( ) { return y; }
+  public Double magnitud( ) { return magnitud; }
   
-
   //Sobreescritura del método de la superclase objeto para imprimir con System.out.println( )
-
   @Override
-
   public String toString( ) {
-
       return "[" + x + "," + y + "]";
-
   }
-
 }
