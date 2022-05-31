@@ -26,6 +26,12 @@ public class Coordenada {
            ((this.y - coordenada.y) * (this.y - coordenada.y)) );
   }
   
+  public Double distancia(Coordenada coordenada) {
+    return Math.sqrt(
+        ((this.x - coordenada.x) * (this.x - coordenada.x))
+         +
+         ((this.y - coordenada.y) * (this.y - coordenada.y)) );
+    }
   //Sobreescritura del método de la superclase objeto para imprimir con System.out.println( )
   @Override
   public String toString( ) {
